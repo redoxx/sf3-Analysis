@@ -1,0 +1,4 @@
+services:
+    medical_analysis.antispam:
+        class: Medical\AnalysisBundle\AntiSpam\OCAntispam
+        arguments: ["@mailer", %locale%, 60]

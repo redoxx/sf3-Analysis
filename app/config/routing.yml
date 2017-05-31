@@ -1,0 +1,11 @@
+medical_analysis:
+    resource: "@MedicalAnalysisBundle/Resources/config/routing.yml"
+    prefix:   /
+
+main:
+    resource: "@MainBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

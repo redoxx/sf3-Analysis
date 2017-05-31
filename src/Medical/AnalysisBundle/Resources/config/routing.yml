@@ -1,0 +1,17 @@
+medical_analysis_homepage:
+    path:     /medical
+    defaults: { _controller: MedicalAnalysisBundle:Default:index }
+
+medical_analysis_add:
+    path:     /medical/add_analyse
+    defaults: { _controller: MedicalAnalysisBundle:Default:addAnalyse }
+
+medical_analysis_edit:
+    path:     /medical/edit_analyse/{idAnalyse}
+    defaults: { _controller: MedicalAnalysisBundle:Default:editAnalyse }
+    requirements:
+      idAnalyse: \d+
+
+import_analysis_codes:
+    path:    /admin/import_analysis_codes
+    defaults: { _controller: MedicalAnalysisBundle:DataManager:import}
