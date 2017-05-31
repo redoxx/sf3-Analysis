@@ -15,3 +15,12 @@ medical_analysis_edit:
 import_analysis_codes:
     path:    /admin/import_analysis_codes
     defaults: { _controller: MedicalAnalysisBundle:DataManager:import}
+
+medical_patient_list:
+    path:     /medical/list-patient
+    defaults: { _controller: MedicalAnalysisBundle:Patient:list }
+medical_patient_edit:
+    path:     /medical/edit-patient/{id}
+    defaults: { _controller: MedicalAnalysisBundle:Patient:edit }
+    requirements:
+      id: \d+

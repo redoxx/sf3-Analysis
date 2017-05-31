@@ -1,0 +1,17 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Patients list{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Patient:list page</h1>
+{% if patients %}
+  <div class="list-group">
+    {% for p in patients %}
+      <a href="{{ path('medical_patient_edit', {'id': p.id}) }}" class="list-group-item">
+      	{{ p.fullName }}
+      	<span class="badge">{{ p.age }} Y</span>
+      </a>
+    {% endfor %}
+  </div>
+{% endif %}
+{% endblock %}
